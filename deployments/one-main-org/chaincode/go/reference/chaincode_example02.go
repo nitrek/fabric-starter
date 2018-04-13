@@ -91,7 +91,7 @@ func (t *SimpleChaincode) move(stub shim.ChaincodeStubInterface, args []string) 
 	var err error
 
 	if len(args) != 3 {
-		return shim.Error("Incorrect number of arguments. Expecting 3")
+		return shim.Error("reference Incorrect number of arguments. Expecting 3")
 	}
 
 	a = args[0]
