@@ -62,7 +62,7 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface) pb.Response {
 	if err != nil {
 		return shim.Error(err.Error())
 	}
-	err = stub.PutState("security", []byte("security1"))
+	err = stub.PutState("security", []byte("security1,"))
 	if err != nil {
 		return shim.Error(err.Error())
 	}
@@ -97,13 +97,16 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 		return t.query(stub, args)
 	} else if function == "subscribe" {
 		// the old "Query" is now implemented in invoke
-		return t.subscribe(stub, args)
+		return t.subscribe(stub, args,name + "@" + org)
 	} else if function == "unsubscribe" {
 		// the old "Query" is now implemented in invoke
-		return t.unsubscribe(stub, args)
+		return t.unsubscribe(stub, args,name + "@" + org)
 	} else if function == "addsecurity" {
 		// the old "Query" is now implemented in invoke
 		return t.addsecurity(stub, args)
+	} else if function == "mysubscriptions" {
+		// the old "Query" is now implemented in invoke
+		return t.mysubscriptions(stub,name)
 	}
 
 	return pb.Response{Status:403, Message:"Invalid invoke function name."}
@@ -166,24 +169,25 @@ func (t *SimpleChaincode) move(stub shim.ChaincodeStubInterface, args []string) 
 }
 
 // Subscribe to a security
-func (t *SimpleChaincode) subscribe(stub shim.ChaincodeStubInterface, args []string) pb.Response {
+func (t *SimpleChaincode) subscribe(stub shim.ChaincodeStubInterface, args []string, name string) pb.Response {
 	var a string    // Entities
 	var aSub string // Security to Subscribe
 	var err error
 
-	if len(args) != 2 {
-		return shim.Error("Incorrect number of hjuh args. Expecting 2")
+	if len(args) != 1 {
+		return shim.Error("Incorrect number of hjuh args. Expecting 1")
 	}
 	
-	a = args[0]
-	aSub = args[1]
+	//a = args[0]
+	a = name
+	aSub = args[0]
 	// Get the state from the ledger
 	aBytes, err := stub.GetState(a+"subscriptions")
 	if err != nil {
 		return shim.Error(err.Error())
 	}
 	if aBytes == nil {
-		return shim.Error("Entity not found")
+		//return shim.Error("Entity not found")
 	}
 	
 	securityBytes, err := stub.GetState("security")
@@ -191,7 +195,7 @@ func (t *SimpleChaincode) subscribe(stub shim.ChaincodeStubInterface, args []str
 		return shim.Error(err.Error())
 	}
 	if securityBytes == nil {
-		return shim.Error("Entity not found")
+		return shim.Error(" security Entity not found")
 	}
 	aSubString := string(aBytes)
 	securityString :=string(securityBytes)
@@ -261,19 +265,19 @@ func (t *SimpleChaincode) addsecurity(stub shim.ChaincodeStubInterface, args []s
 	
 	return shim.Success(nil)
 }
-// Subscribe to a security
-func (t *SimpleChaincode) unsubscribe(stub shim.ChaincodeStubInterface, args []string) pb.Response {
+// unSubscribe to a security
+func (t *SimpleChaincode) unsubscribe(stub shim.ChaincodeStubInterface, args []string,name string) pb.Response {
 	var a string    // Entities
 	var aSub string // Asset holdings
 	//var x int          // Transaction value
 	var err error
 
-	if len(args) != 2 {
-		return shim.Error("Incorrect number of hjuh args. Expecting 2")
+	if len(args) != 1 {
+		return shim.Error("Incorrect number of hjuh args. Expecting 1")
 	}
 	
-	a = args[0]
-	aSub = args[1]
+	a = name//args[0]
+	aSub = args[0]
 	// Get the state from the ledger
 	aBytes, err := stub.GetState(a+"subscriptions")
 	if err != nil {
@@ -293,8 +297,32 @@ func (t *SimpleChaincode) unsubscribe(stub shim.ChaincodeStubInterface, args []s
 	if err != nil {
 		return shim.Error(err.Error())
 	}
-	
+	//remove security from security list
+	securitySubBytes, err := stub.GetState(aSub)
+	securityString :=string(securitySubBytes)
+	securityString = strings.Replace(securityString, a+",", "", 1)
+	err = stub.PutState(aSub,[]byte(securityString))
+	if err != nil {
+		return shim.Error(err.Error())
+	}
 	return shim.Success(nil)
+}
+// get mysecurity
+func (t *SimpleChaincode) mysubscriptions(stub shim.ChaincodeStubInterface,name string) pb.Response {
+	var a string    // Entities
+	//var x int          // Transaction value
+	var err error
+
+	a = name//args[0]
+	// Get the state from the ledger
+	aBytes, err := stub.GetState(a+"subscriptions")
+	if err != nil {
+		return shim.Error(err.Error())
+	}
+	if aBytes == nil {
+		return shim.Error("Entity not found")
+	}
+	return shim.Success(aBytes)
 }
 
 // deletes an entity from state
