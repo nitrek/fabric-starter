@@ -115,6 +115,9 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 	} else if function == "myCaSecurity" {
 		// the old "Query" is now implemented in invoke
 		return t.myCaSecurity(stub,args,org)
+	} else if function == "subscribe2" {
+		// the old "Query" is now implemented in invoke
+		return t.subscribe2(stub,args,org)
 	}
 
 	return pb.Response{Status:403, Message:"Invalid invoke function name."}
@@ -235,6 +238,23 @@ func (t *SimpleChaincode) subscribe(stub shim.ChaincodeStubInterface, args []str
 		return shim.Error(err2.Error())
 	}
 	}
+	return shim.Success(nil)
+}
+// Subscribe to a security
+func (t *SimpleChaincode) subscribe2(stub shim.ChaincodeStubInterface, args []string, name string) pb.Response {
+	var a string    // Entities
+	var aSub string // Security to Subscribe
+	
+
+	if len(args) != 1 {
+		return shim.Error("Incorrect number of hjuh args. Expecting 1")
+	}
+	
+	//a = args[0]
+	a = name
+	aSub = args[0]
+	// Write the state back to the ledger
+   stub.PutState(a+"subscriptions"+aSub,[]byte(aSub))
 	return shim.Success(nil)
 }
 //add new security

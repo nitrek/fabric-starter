@@ -58,6 +58,7 @@ services:
     depends_on:
       - ca.ORG.DOMAIN
     PEER_EXTRA_HOSTS
+    
 
   # fabric-rest api server
   api.ORG.DOMAIN:

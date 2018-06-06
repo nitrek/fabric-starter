@@ -12,10 +12,10 @@ services:
     environment:
       - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
       - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.a.example.com-cert.pem
-      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/fb027f24f3e999bb26e5924cde2e0e79795ef953a5e1549044e008131af3f176_sk
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/7d1376c2fe179ab9d776175dca8af348ebe95fb3c7162e8df69eb4e4773ca45a_sk
       - FABRIC_CA_SERVER_TLS_ENABLED=true
       - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.a.example.com-cert.pem
-      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/fb027f24f3e999bb26e5924cde2e0e79795ef953a5e1549044e008131af3f176_sk
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/7d1376c2fe179ab9d776175dca8af348ebe95fb3c7162e8df69eb4e4773ca45a_sk
 #    ports:
 #      - 7054:7054
     command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
@@ -57,6 +57,7 @@ services:
         - ../artifacts/crypto-config/peerOrganizations/a.example.com/peers/peer1.a.example.com/:/etc/hyperledger/crypto/peer
     depends_on:
       - ca.a.example.com
+    
     
 
   # fabric-rest api server
