@@ -13,12 +13,14 @@ artifactsTemplatesFolder="artifact-templates"
 
 : ${DOMAIN:="example.com"}
 : ${IP_ORDERER:="54.234.201.67"}
-: ${ORG1:="a"}
-: ${ORG2:="b"}
-: ${ORG3:="c"}
+: ${ORG1:="a1"}
+: ${ORG2:="b1"}
+: ${ORG3:="c1"}
+: ${ORG4:="d"}
 : ${IP1:="54.86.191.160"}
 : ${IP2:="54.243.0.168"}
 : ${IP3:="54.211.142.174"}
+: ${IP4:="54.211.142.189"}
 
 echo "Use Fabric-Starter home: $FABRIC_STARTER_HOME"
 echo "Use docker compose template folder: $TEMPLATES_DOCKER_COMPOSE_FOLDER"
@@ -52,7 +54,7 @@ DEFAULT_PEER1_PORT=7056
 DEFAULT_PEER1_EVENT_PORT=7058
 
 DEFAULT_PEER_EXTRA_HOSTS="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER"
-DEFAULT_CLI_EXTRA_HOSTS="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - www.$DOMAIN:$IP_ORDERER[newline]      - www.$ORG1.$DOMAIN:$IP1[newline]      - www.$ORG2.$DOMAIN:$IP2[newline]      - www.$ORG3.$DOMAIN:$IP3"
+DEFAULT_CLI_EXTRA_HOSTS="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - www.$DOMAIN:$IP_ORDERER[newline]      - www.$ORG1.$DOMAIN:$IP1[newline]      - www.$ORG2.$DOMAIN:$IP2[newline]      - www.$ORG3.$DOMAIN:$IP3  - www.$ORG4.$DOMAIN:$IP4"
 DEFAULT_API_EXTRA_HOSTS1="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3"
 DEFAULT_API_EXTRA_HOSTS2="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG3.$DOMAIN:$IP3"
 DEFAULT_API_EXTRA_HOSTS3="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG2.$DOMAIN:$IP2"
@@ -149,7 +151,7 @@ function generateOrdererDockerCompose() {
 
     cli_extra_hosts=${DEFAULT_CLI_EXTRA_HOSTS}
 
-    sed -e "s/DOMAIN/$DOMAIN/g" -e "s/MAIN_ORG/$mainOrg/g" -e "s/CLI_EXTRA_HOSTS/$cli_extra_hosts/g" -e "s/ORDERER_PORT/$DEFAULT_ORDERER_PORT/g" -e "s/WWW_PORT/$DEFAULT_WWW_PORT/g" -e "s/ORG1/$ORG1/g" -e "s/ORG2/$ORG2/g" -e "s/ORG3/$ORG3/g" ${compose_template} | awk '{gsub(/\[newline\]/, "\n")}1' > ${f}
+    sed -e "s/DOMAIN/$DOMAIN/g" -e "s/MAIN_ORG/$mainOrg/g" -e "s/CLI_EXTRA_HOSTS/$cli_extra_hosts/g" -e "s/ORDERER_PORT/$DEFAULT_ORDERER_PORT/g" -e "s/WWW_PORT/$DEFAULT_WWW_PORT/g" -e "s/ORG1/$ORG1/g" -e "s/ORG2/$ORG2/g" -e "s/ORG3/$ORG3/g" -e "s/ORG4/$ORG4/g" ${compose_template} | awk '{gsub(/\[newline\]/, "\n")}1' > ${f}
 }
 
 function generateNetworkConfig() {
@@ -1206,8 +1208,10 @@ if [ "${MODE}" == "up" -a "${ORG}" == "" ]; then
   joinWarmUp ${ORG3} "${ORG1}-${ORG3}" ${CHAINCODE_BILATERAL_NAME}
   joinWarmUp ${ORG3} "${ORG2}-${ORG3}" ${CHAINCODE_BILATERAL_NAME}
 
+  joinWarmUp ${ORG4} common ${CHAINCODE_COMMON_NAME}
+  
 elif [ "${MODE}" == "down" ]; then
-  for org in ${DOMAIN} ${ORG1} ${ORG2} ${ORG3}
+  for org in ${DOMAIN} ${ORG1} ${ORG2} ${ORG3} ${ORG4}
   do
     dockerComposeDown ${org}
   done
@@ -1223,6 +1227,7 @@ elif [ "${MODE}" == "generate" ]; then
   generatePeerArtifacts ${ORG1} 4000 8081 7054 7051 7053 7056 7058
   generatePeerArtifacts ${ORG2} 4001 8082 8054 8051 8053 8056 8058
   generatePeerArtifacts ${ORG3} 4002 8083 9054 9051 9053 9056 9058
+  generatePeerArtifacts ${ORG3} 4003 8084 10054 10051 10053 10056 10058
   generateOrdererDockerCompose ${ORG1}
   generateOrdererArtifacts
   #generateWait

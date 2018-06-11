@@ -30,6 +30,7 @@ Profiles:
                 - *ORG1
                 - *ORG2
                 - *ORG3
+                - *ORG4
     ORG2-ORG3:
         Consortium: SampleConsortium
         Application:
@@ -107,6 +108,14 @@ Organizations:
         AnchorPeers:
             - Host: peer0.ORG3.DOMAIN
               Port: 7051
+    
+    - &ORG4
+        Name: ORG3MSP
+        ID: ORG3MSP
+        MSPDir: crypto-config/peerOrganizations/ORG3.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORG4.DOMAIN
+              Port: 7051
 
 ################################################################################
 #
@@ -132,7 +141,7 @@ Orderer: &OrdererDefaults
     BatchSize:
 
         # Max Message Count: The maximum number of messages to permit in a batch
-        MaxMessageCount: 10
+        MaxMessageCount: 100
 
         # Absolute Max Bytes: The absolute maximum number of bytes allowed for
         # the serialized messages in a batch.
