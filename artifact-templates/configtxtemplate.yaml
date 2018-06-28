@@ -22,6 +22,12 @@ Profiles:
                     - *ORG1
                     - *ORG2
                     - *ORG3
+                    - *ORG4
+                    - *ORG5
+                    - *ORG6
+                    - *ORG7
+                    - *ORG8
+                    - *ORG9
     common:
         Consortium: SampleConsortium
         Application:
@@ -30,6 +36,12 @@ Profiles:
                 - *ORG1
                 - *ORG2
                 - *ORG3
+                - *ORG4
+                - *ORG5
+                - *ORG6
+                - *ORG7
+                - *ORG8
+                - *ORG9
     ORG2-ORG3:
         Consortium: SampleConsortium
         Application:
@@ -106,6 +118,54 @@ Organizations:
         MSPDir: crypto-config/peerOrganizations/ORG3.DOMAIN/msp
         AnchorPeers:
             - Host: peer0.ORG3.DOMAIN
+              Port: 7051
+
+    - &ORG4
+        Name: ORG4MSP
+        ID: ORG4MSP
+        MSPDir: crypto-config/peerOrganizations/ORG4.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORG4.DOMAIN
+              Port: 7051
+
+    - &ORG5
+        Name: ORG5MSP
+        ID: ORG5MSP
+        MSPDir: crypto-config/peerOrganizations/ORG5.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORG5.DOMAIN
+              Port: 7051
+
+    - &ORG6
+        Name: ORG6MSP
+        ID: ORG6MSP
+        MSPDir: crypto-config/peerOrganizations/ORG6.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORG6.DOMAIN
+              Port: 7051
+
+    - &ORG7
+        Name: ORG7MSP
+        ID: ORG7MSP
+        MSPDir: crypto-config/peerOrganizations/ORG7.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORG7.DOMAIN
+              Port: 7051
+
+    - &ORG8
+        Name: ORG8MSP
+        ID: ORG8MSP
+        MSPDir: crypto-config/peerOrganizations/ORG8.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORG8.DOMAIN
+              Port: 7051
+
+    - &ORG9
+        Name: ORG9MSP
+        ID: ORG9MSP
+        MSPDir: crypto-config/peerOrganizations/ORG9.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORG9.DOMAIN
               Port: 7051
 
 ################################################################################
