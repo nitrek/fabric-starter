@@ -17,12 +17,23 @@ artifactsTemplatesFolder="artifact-templates"
 : ${ORG2:="b"}
 : ${ORG3:="c"}
 : ${ORG4:="d"} #orgi4added
-: ${ORG5:="e"} #orgi4added
-: ${ORG6:="f"} #orgi4added
-: ${ORG7:="g"} #orgi4added
-: ${ORG8:="h"} #orgi4added
-: ${ORG9:="i"} #orgi4added
-: ${ORG10:="j"} #orgi4added
+: ${ORG5:="e"}
+: ${ORG6:="f"}
+: ${ORG7:="g"}
+: ${ORG8:="h"}
+: ${ORG9:="i"}
+: ${ORGT1:="j"} #orgi4added
+: ${ORGT2:="k"}
+: ${ORGT3:="l"}
+: ${ORGT4:="m"}
+: ${ORGT5:="n"}
+: ${ORGT6:="o"}
+: ${ORGT7:="p"}
+: ${ORGT8:="q"}
+: ${ORGT9:="r"}
+: ${ORGU1:="s"}
+: ${ORGU2:="t"}
+
 : ${IP1:="54.86.191.160"}
 : ${IP2:="54.243.0.168"}
 : ${IP3:="54.211.142.174"}
@@ -62,17 +73,27 @@ DEFAULT_PEER1_EVENT_PORT=7058
 
 #orgi4added
 DEFAULT_PEER_EXTRA_HOSTS="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER"
-DEFAULT_CLI_EXTRA_HOSTS="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - www.$DOMAIN:$IP_ORDERER[newline]      - www.$ORG1.$DOMAIN:$IP1[newline]      - www.$ORG2.$DOMAIN:$IP2[newline]      - www.$ORG3.$DOMAIN:$IP3[newline]      - www.$ORG4.$DOMAIN:$IP4[newline]      - www.$ORG5.$DOMAIN:$IP5[newline]      - www.$ORG6.$DOMAIN:$IP3[newline]      - www.$ORG7.$DOMAIN:$IP3[newline]      - www.$ORG8.$DOMAIN:$IP3[newline]      - www.$ORG9.$DOMAIN:$IP3[newline]      - www.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS1="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS2="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS3="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS4="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS5="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS6="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS7="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS8="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS9="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG10.$DOMAIN:$IP3[newline]"
-DEFAULT_API_EXTRA_HOSTS10="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]"
+DEFAULT_CLI_EXTRA_HOSTS="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - www.$DOMAIN:$IP_ORDERER[newline]      - www.$ORG1.$DOMAIN:$IP1[newline]      - www.$ORG2.$DOMAIN:$IP2[newline]      - www.$ORG3.$DOMAIN:$IP3[newline]      - www.$ORG4.$DOMAIN:$IP4[newline]      - www.$ORG5.$DOMAIN:$IP5[newline]      - www.$ORG6.$DOMAIN:$IP3[newline]      - www.$ORG7.$DOMAIN:$IP3[newline]      - www.$ORG8.$DOMAIN:$IP3[newline]      - www.$ORG9.$DOMAIN:$IP3[newline]      - www.$ORGT1.$DOMAIN:$IP3[newline]      - www.$ORGT2.$DOMAIN:$IP2[newline]      - www.$ORGT3.$DOMAIN:$IP3[newline]      - www.$ORGT4.$DOMAIN:$IP4[newline]      - www.$ORGT5.$DOMAIN:$IP5[newline]      - www.$ORGT6.$DOMAIN:$IP3[newline]      - www.$ORGT7.$DOMAIN:$IP3[newline]      - www.$ORGT8.$DOMAIN:$IP3[newline]      - www.$ORGT9.$DOMAIN:$IP3[newline]      - www.$ORGU1.$DOMAIN:$IP3[newline]      - www.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS1="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS2="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS3="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS4="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS5="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS6="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS7="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS8="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS9="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP1[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS10="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS11="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS12="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS13="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS14="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT1.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS15="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS16="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS17="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS18="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS19="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3[newline]      - peer0.$ORGU2.$DOMAIN:$IP3"
+DEFAULT_API_EXTRA_HOSTS20="extra_hosts:[newline]      - orderer.$DOMAIN:$IP_ORDERER[newline]      - peer0.$ORG2.$DOMAIN:$IP2[newline]      - peer0.$ORG3.$DOMAIN:$IP3[newline]      - peer0.$ORG4.$DOMAIN:$IP4[newline]      - peer0.$ORG5.$DOMAIN:$IP5[newline]      - peer0.$ORG6.$DOMAIN:$IP3[newline]      - peer0.$ORG7.$DOMAIN:$IP3[newline]      - peer0.$ORG8.$DOMAIN:$IP3[newline]      - peer0.$ORG9.$DOMAIN:$IP3[newline]      - peer0.$ORG1.$DOMAIN:$IP3[newline]      - peer0.$ORGT2.$DOMAIN:$IP2[newline]      - peer0.$ORGT3.$DOMAIN:$IP3[newline]      - peer0.$ORGT4.$DOMAIN:$IP4[newline]      - peer0.$ORGT5.$DOMAIN:$IP5[newline]      - peer0.$ORGT6.$DOMAIN:$IP3[newline]      - peer0.$ORGT7.$DOMAIN:$IP3[newline]      - peer0.$ORGT8.$DOMAIN:$IP3[newline]      - peer0.$ORGT9.$DOMAIN:$IP3[newline]      - peer0.$ORGU1.$DOMAIN:$IP3[newline]      - peer0.$ORGT1.$DOMAIN:$IP3"
 GID=$(id -g)
 
 function removeUnwantedContainers() {
@@ -112,7 +133,7 @@ function removeArtifacts() {
 }
 
 function removeDockersFromAllCompose() {
-    for o in ${DOMAIN} ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10} #orgi4added
+    for o in ${DOMAIN} ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}#orgi4added
     do
       removeDockersFromCompose ${o}
     done
@@ -154,7 +175,7 @@ function removeDockersWithOrg() {
 
 function generateOrdererDockerCompose() {
     mainOrg=$1
-    echo "Creating orderer docker compose yaml file with $DOMAIN, $ORG1, $ORG2, $ORG3, $ORG4, $ORG5, $ORG6, $ORG7, $ORG8, $ORG9, $ORG10, $DEFAULT_ORDERER_PORT, $DEFAULT_WWW_PORT" #orgi4added
+    echo "Creating orderer docker compose yaml file with $DOMAIN, $ORG1, $ORG2, $ORG3, $ORG4, $ORG5, $ORG6, $ORG7, $ORG8, $ORG9, $ORGT1,$ORGT2,$ORGT3,$ORGT4,$ORGT5,$ORGT6,$ORGT7,$ORGT8,$ORGT9,$ORGU1,$ORGU2, $DEFAULT_ORDERER_PORT, $DEFAULT_WWW_PORT" #orgi4added
 
     compose_template=$TEMPLATES_DOCKER_COMPOSE_FOLDER/docker-composetemplate-orderer.yaml
     if [ -n "$mainOrg" ]; then
@@ -165,7 +186,7 @@ function generateOrdererDockerCompose() {
 
     cli_extra_hosts=${DEFAULT_CLI_EXTRA_HOSTS}
 #orgi4added
-    sed -e "s/DOMAIN/$DOMAIN/g" -e "s/MAIN_ORG/$mainOrg/g" -e "s/CLI_EXTRA_HOSTS/$cli_extra_hosts/g" -e "s/ORDERER_PORT/$DEFAULT_ORDERER_PORT/g" -e "s/WWW_PORT/$DEFAULT_WWW_PORT/g" -e "s/ORG1/$ORG1/g" -e "s/ORG2/$ORG2/g" -e "s/ORG3/$ORG3/g"  -e "s/ORG4/$ORG4/g"   -e "s/ORG5/$ORG5/g"   -e "s/ORG6/$ORG6/g"   -e "s/ORG7/$ORG7/g"   -e "s/ORG8/$ORG8/g"   -e "s/ORG9/$ORG9/g"   -e "s/ORG10/$ORG10/g" ${compose_template} | awk '{gsub(/\[newline\]/, "\n")}1' > ${f}
+    sed -e "s/DOMAIN/$DOMAIN/g" -e "s/MAIN_ORG/$mainOrg/g" -e "s/CLI_EXTRA_HOSTS/$cli_extra_hosts/g" -e "s/ORDERER_PORT/$DEFAULT_ORDERER_PORT/g" -e "s/WWW_PORT/$DEFAULT_WWW_PORT/g" -e "s/ORG1/$ORG1/g" -e "s/ORG2/$ORG2/g" -e "s/ORG3/$ORG3/g"  -e "s/ORG4/$ORG4/g"   -e "s/ORG5/$ORG5/g"   -e "s/ORG6/$ORG6/g"   -e "s/ORG7/$ORG7/g"   -e "s/ORG8/$ORG8/g"   -e "s/ORG9/$ORG9/g"   -e "s/ORGT1/$ORGT1/g"   -e "s/ORGT2/$ORGT2/g"   -e "s/ORGT3/$ORGT3/g"   -e "s/ORGT4/$ORGT4/g"   -e "s/ORGT5/$ORGT5/g"    -e "s/ORGT6/$ORGT6/g"   -e "s/ORGT7/$ORGT7/g"   -e "s/ORGT8/$ORGT8/g"   -e "s/ORGT8/$ORGT8/g"   -e "s/ORGT9/$ORGT9/g"   -e "s/ORGU1/$ORGU1/g"   -e "s/ORGU2/$ORGU2/g" ${compose_template} | awk '{gsub(/\[newline\]/, "\n")}1' > ${f}
 }
 
 function generateNetworkConfig() {
@@ -217,7 +238,7 @@ function addOrgToNetworkConfig() {
 function generateOrdererArtifacts() {
     org=$1
 
-    echo "Creating orderer yaml files with $DOMAIN, $ORG1, $ORG2, $ORG3, $ORG4, $ORG5, $ORG6, $ORG7, $ORG8, $ORG9, $ORG10, $DEFAULT_ORDERER_PORT, $DEFAULT_WWW_PORT"
+    echo "Creating orderer yaml files with $DOMAIN, $ORG1, $ORG2, $ORG3, $ORG4, $ORG5, $ORG6, $ORG7, $ORG8, $ORG9, $ORGT1,$ORGT2,$ORGT3,$ORGT4,$ORGT5,$ORGT6,$ORGT7,$ORGT8,$ORGT9,$ORGU1,$ORGU2, $DEFAULT_ORDERER_PORT, $DEFAULT_WWW_PORT"
 
     f="$GENERATED_DOCKER_COMPOSE_FOLDER/docker-compose-$DOMAIN.yaml"
 
@@ -229,9 +250,9 @@ function generateOrdererArtifacts() {
         sed -e "s/DOMAIN/$DOMAIN/g" -e "s/ORG1/$org/g" "$TEMPLATES_ARTIFACTS_FOLDER/configtxtemplate-oneOrg-orderer.yaml" > $GENERATED_ARTIFACTS_FOLDER/configtx.yaml
         createChannels=("common")
     else
-        generateNetworkConfig ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10} 
+        generateNetworkConfig ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}
         # replace in configtx
-        sed -e "s/DOMAIN/$DOMAIN/g" -e "s/ORG1/$ORG1/g" -e "s/ORG2/$ORG2/g" -e "s/ORG3/$ORG3/g" -e "s/ORG4/$ORG4/g" -e "s/ORG5/$ORG5/g"   -e "s/ORG6/$ORG6/g"   -e "s/ORG7/$ORG7/g"   -e "s/ORG8/$ORG8/g"   -e "s/ORG9/$ORG9/g"   -e "s/ORG10/$ORG10/g" $TEMPLATES_ARTIFACTS_FOLDER/configtxtemplate.yaml > $GENERATED_ARTIFACTS_FOLDER/configtx.yaml
+        sed -e "s/DOMAIN/$DOMAIN/g" -e "s/ORG1/$ORG1/g" -e "s/ORG2/$ORG2/g" -e "s/ORG3/$ORG3/g" -e "s/ORG4/$ORG4/g" -e "s/ORG5/$ORG5/g"   -e "s/ORG6/$ORG6/g"   -e "s/ORG7/$ORG7/g"   -e "s/ORG8/$ORG8/g"   -e "s/ORG9/$ORG9/g"   -e "s/ORGT1/$ORGT1/g"    -e "s/ORGT2/$ORGT2/g"    -e "s/ORGT3/$ORGT3/g"    -e "s/ORGT4/$ORGT4/g"    -e "s/ORGT5/$ORGT5/g"    -e "s/ORGT6/$ORGT6/g"    -e "s/ORGT7/$ORGT7/g"    -e "s/ORGT8/$ORGT8/g"    -e "s/ORGT9/$ORGT9/g"    -e "s/ORGU1/$ORGU1/g"    -e "s/ORGU2/$ORGU2/g" $TEMPLATES_ARTIFACTS_FOLDER/configtxtemplate.yaml > $GENERATED_ARTIFACTS_FOLDER/configtx.yaml
         createChannels=("common" "$ORG1-$ORG2" "$ORG1-$ORG3" "$ORG2-$ORG3")
     fi
 
@@ -286,8 +307,28 @@ function generatePeerArtifacts() {
         api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS8}
       elif [ ${org} == ${ORG9} ]; then
         api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS9}
-      elif [ ${org} == ${ORG10} ]; then
+      elif [ ${org} == ${ORGT1} ]; then
         api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS10}
+      elif [ ${org} == ${ORGT2} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS11}
+      elif [ ${org} == ${ORGT3} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS12}
+      elif [ ${org} == ${ORGT4} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS13}
+      elif [ ${org} == ${ORGT5} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS14}
+      elif [ ${org} == ${ORGT6} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS15}
+      elif [ ${org} == ${ORGT7} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS16}
+      elif [ ${org} == ${ORGT8} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS17}
+      elif [ ${org} == ${ORGT9} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS18}
+      elif [ ${org} == ${ORGU1} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS19}
+      elif [ ${org} == ${ORGU2} ]; then
+        api_extra_hosts=${DEFAULT_API_EXTRA_HOSTS20}
       fi
     fi
 
@@ -675,7 +716,7 @@ function downloadChannelBlockFile() {
 }
 
 function downloadArtifactsMember() {
-  makeCertDirs ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10}
+  makeCertDirs ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}
 
   org=$1
   mainOrg=$2
@@ -694,7 +735,7 @@ function downloadArtifactsMember() {
   #TODO download not from all members but from the orderer
   info "downloading member cert files using $f"
 
-  c="for ORG in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10}; do wget ${WGET_OPTS} --directory-prefix crypto-config/peerOrganizations/\${ORG}.$DOMAIN/peers/peer0.\${ORG}.$DOMAIN/tls http://www.\${ORG}.$DOMAIN:$DEFAULT_WWW_PORT/crypto-config/peerOrganizations/\${ORG}.$DOMAIN/peers/peer0.\${ORG}.$DOMAIN/tls/ca.crt; done"
+  c="for ORG in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}; do wget ${WGET_OPTS} --directory-prefix crypto-config/peerOrganizations/\${ORG}.$DOMAIN/peers/peer0.\${ORG}.$DOMAIN/tls http://www.\${ORG}.$DOMAIN:$DEFAULT_WWW_PORT/crypto-config/peerOrganizations/\${ORG}.$DOMAIN/peers/peer0.\${ORG}.$DOMAIN/tls/ca.crt; done"
   echo ${c}
   docker-compose --file ${f} run --rm "cli.$org.$DOMAIN" bash -c "${c} && chown -R $UID:$GID ."
 
@@ -715,12 +756,12 @@ function downloadArtifactsOrderer() {
 
   mainOrg=$1
   if [ -z "$mainOrg" ]; then
-      makeCertDirs ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10}
-      downloadMemberMSP ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10}
+      makeCertDirs ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}
+      downloadMemberMSP ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}
 
       info "downloading member cert files using $f"
 
-      c="for ORG in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10}; do wget ${WGET_OPTS} --directory-prefix crypto-config/peerOrganizations/\${ORG}.$DOMAIN/peers/peer0.\${ORG}.$DOMAIN/tls http://www.\${ORG}.$DOMAIN:$DEFAULT_WWW_PORT/crypto-config/peerOrganizations/\${ORG}.$DOMAIN/peers/peer0.\${ORG}.$DOMAIN/tls/ca.crt; done"
+      c="for ORG in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}; do wget ${WGET_OPTS} --directory-prefix crypto-config/peerOrganizations/\${ORG}.$DOMAIN/peers/peer0.\${ORG}.$DOMAIN/tls http://www.\${ORG}.$DOMAIN:$DEFAULT_WWW_PORT/crypto-config/peerOrganizations/\${ORG}.$DOMAIN/peers/peer0.\${ORG}.$DOMAIN/tls/ca.crt; done"
       echo ${c}
     #  executeBashCmdInCli "docker-compose-$DOMAIN.yaml" "cli.$DOMAIN" "${c} && chown -R $UID:$GID ."
       f="$GENERATED_DOCKER_COMPOSE_FOLDER/docker-compose-$DOMAIN.yaml"
@@ -808,7 +849,7 @@ function addOrg() {
 
   ! [[ -s $GENERATED_ARTIFACTS_FOLDER/config_block.json ]] && echo "$GENERATED_ARTIFACTS_FOLDER/config_block.json is empty. Is configtxlator running?" && exit 1
 
-  for o in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10} 
+  for o in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2} 
     do
       d="cli.$o.$DOMAIN"
       c="peer channel signconfigtx -f update_in_envelope.pb"
@@ -830,9 +871,9 @@ function addOrg() {
   info "$ORG1 is upgrading chaincode $CHAINCODE_COMMON_NAME on $channel to include org $org in its endorsement policy"
 
   v="2.0"
-  policy="OR ('${ORG1}MSP.member','${ORG2}MSP.member','${ORG3}MSP.member','${ORG4}MSP.member','${ORG5}MSP.member','${ORG6}MSP.member','${ORG7}MSP.member','${ORG8}MSP.member','${ORG9}MSP.member','${ORG10}MSP.member','${org}MSP.member')"
+  policy="OR ('${ORG1}MSP.member','${ORG2}MSP.member','${ORG3}MSP.member','${ORG4}MSP.member','${ORG5}MSP.member','${ORG6}MSP.member','${ORG7}MSP.member','${ORG8}MSP.member','${ORG9}MSP.member','${ORGT1}MSP.member','${ORGT2}MSP.member','${ORGT3}MSP.member','${ORGT4}MSP.member','${ORGT5}MSP.member','${ORGT6}MSP.member','${ORGT7}MSP.member','${ORGT8}MSP.member','${ORGT9}MSP.member','${ORGU1}MSP.member','${ORGU2}MSP.member','${org}MSP.member')"
 
-  for o in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10} ${org}
+  for o in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2} ${org}
     do
       installChaincode ${o} ${CHAINCODE_COMMON_NAME} ${v}
     done
@@ -1186,12 +1227,12 @@ while getopts "h?m:o:a:w:c:0:1:2:3:k:v:i:n:M:I:R:P:" opt; do
 done
 
 if [ "${MODE}" == "up" -a "${ORG}" == "" ]; then 
-  for org in ${DOMAIN} ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10} 
+  for org in ${DOMAIN} ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2} 
   do
     dockerComposeUp ${org}
   done
 
-  for org in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10}
+  for org in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2} 
   do
     installAll ${org}
   done
@@ -1214,10 +1255,20 @@ if [ "${MODE}" == "up" -a "${ORG}" == "" ]; then
   joinWarmUp ${ORG7} common ${CHAINCODE_COMMON_NAME}
   joinWarmUp ${ORG8} common ${CHAINCODE_COMMON_NAME}
   joinWarmUp ${ORG9} common ${CHAINCODE_COMMON_NAME}
-  joinWarmUp ${ORG10} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGT1} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGT2} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGT3} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGT4} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGT5} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGT6} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGT7} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGT8} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGT9} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGU1} common ${CHAINCODE_COMMON_NAME}
+  joinWarmUp ${ORGU2} common ${CHAINCODE_COMMON_NAME}
   
 elif [ "${MODE}" == "down" ]; then
-  for org in ${DOMAIN} ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10} 
+  for org in ${DOMAIN} ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}
   do
     dockerComposeDown ${org}
   done
@@ -1239,7 +1290,18 @@ elif [ "${MODE}" == "generate" ]; then
   generatePeerArtifacts ${ORG7} 4006 8087 4054 4051 4053 4056 4058
   generatePeerArtifacts ${ORG8} 4007 8088 5054 5051 5053 5056 5058
   generatePeerArtifacts ${ORG9} 4008 8089 6054 6051 6053 6056 6058
-  generatePeerArtifacts ${ORG10} 4009 8090 17054 17051 17053 17056 17058
+  generatePeerArtifacts ${ORGT1} 4009 8090 17054 17051 17053 17056 17058
+  generatePeerArtifacts ${ORGT2} 4010 8091 18054 18051 18053 18056 18058
+  generatePeerArtifacts ${ORGT3} 4011 8092 19054 19051 19053 19056 19058
+  generatePeerArtifacts ${ORGT4} 4012 8093 11054 11051 11053 11056 11058
+  generatePeerArtifacts ${ORGT5} 4013 8094 12054 12051 12053 12056 12058
+  generatePeerArtifacts ${ORGT6} 4014 8095 13054 13051 13053 13056 13058
+  generatePeerArtifacts ${ORGT7} 4015 8096 14054 14051 14053 14056 14058
+  generatePeerArtifacts ${ORGT8} 4016 8097 15054 15051 15053 15056 15058
+  generatePeerArtifacts ${ORGT9} 4017 8098 16054 16051 16053 16056 16058
+  generatePeerArtifacts ${ORGU1} 4018 8099 26054 26051 26053 26056 26058
+  generatePeerArtifacts ${ORGU2} 4019 8100 36054 36051 36053 36056 36058
+  
   generateOrdererDockerCompose ${ORG1}
   generateOrdererArtifacts
   #generateWait
@@ -1409,12 +1471,12 @@ elif [ "${MODE}" == "iterateChannels" ]; then
 elif [ "${MODE}" == "removeArtifacts" ]; then
   removeArtifacts
 elif [ "${MODE}" == "generateNetworkConfig" ]; then
-  [[ -z "$3" ]] && generateNetworkConfig ${ORG1} ${ORG2} ${ORG3} {$ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10}
+  [[ -z "$3" ]] && generateNetworkConfig ${ORG1} ${ORG2} ${ORG3} {$ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}
   [[ -n "$3" ]] && generateNetworkConfig ${@:3}
 elif [ "${MODE}" == "addOrgToNetworkConfig" ]; then # -o ORG
   addOrgToNetworkConfig ${ORG}
 elif [ "${MODE}" == "upgradeChaincode" ]; then #deprecated
-  for org in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORG10} 
+  for org in ${ORG1} ${ORG2} ${ORG3} ${ORG4} ${ORG5} ${ORG6} ${ORG7} ${ORG8} ${ORG9} ${ORGT1} ${ORGT2} ${ORGT3} ${ORGT4} ${ORGT5} ${ORGT6} ${ORGT7} ${ORGT8} ${ORGT9} ${ORGU1} ${ORGU2}
   do
     upgradeChaincode ${org} ${CHAINCODE_COMMON_NAME} ${CHAINCODE_VERSION}
   done

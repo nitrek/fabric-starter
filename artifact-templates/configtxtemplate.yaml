@@ -28,6 +28,17 @@ Profiles:
                     - *ORG7
                     - *ORG8
                     - *ORG9
+                    - *ORGT1
+                    - *ORGT2
+                    - *ORGT3
+                    - *ORGT4
+                    - *ORGT5
+                    - *ORGT6
+                    - *ORGT7
+                    - *ORGT8
+                    - *ORGT9
+                    - *ORGU1
+                    - *ORGU2
     common:
         Consortium: SampleConsortium
         Application:
@@ -42,6 +53,17 @@ Profiles:
                 - *ORG7
                 - *ORG8
                 - *ORG9
+                - *ORGT1
+                - *ORGT2
+                - *ORGT3
+                - *ORGT4
+                - *ORGT5
+                - *ORGT6
+                - *ORGT7
+                - *ORGT8
+                - *ORGT9
+                - *ORGU1
+                - *ORGU2
     ORG2-ORG3:
         Consortium: SampleConsortium
         Application:
@@ -167,6 +189,96 @@ Organizations:
         AnchorPeers:
             - Host: peer0.ORG9.DOMAIN
               Port: 7051
+
+
+    - &ORGT1
+        Name: ORGT1MSP
+        ID: ORGT1MSP
+        MSPDir: crypto-config/peerOrganizations/ORGT1.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGT1.DOMAIN
+              Port: 7051
+
+    - &ORGT2
+        Name: ORGT2MSP
+        ID: ORGT2MSP
+        MSPDir: crypto-config/peerOrganizations/ORGT2.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGT2.DOMAIN
+              Port: 7051
+
+    - &ORGT3
+        Name: ORGT3MSP
+        ID: ORGT3MSP
+        MSPDir: crypto-config/peerOrganizations/ORGT3.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGT3.DOMAIN
+              Port: 7051
+
+    - &ORGT4
+        Name: ORGT4MSP
+        ID: ORGT4MSP
+        MSPDir: crypto-config/peerOrganizations/ORGT4.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGT4.DOMAIN
+              Port: 7051
+
+    - &ORGT5
+        Name: ORGT5MSP
+        ID: ORGT5MSP
+        MSPDir: crypto-config/peerOrganizations/ORGT5.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGT5.DOMAIN
+              Port: 7051
+
+    - &ORGT6
+        Name: ORGT6MSP
+        ID: ORGT6MSP
+        MSPDir: crypto-config/peerOrganizations/ORGT6.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGT6.DOMAIN
+              Port: 7051
+
+    - &ORGT7
+        Name: ORGT7MSP
+        ID: ORGT7MSP
+        MSPDir: crypto-config/peerOrganizations/ORGT7.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGT7.DOMAIN
+              Port: 7051
+
+    - &ORGT8
+        Name: ORGT8MSP
+        ID: ORGT8MSP
+        MSPDir: crypto-config/peerOrganizations/ORGT8.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGT8.DOMAIN
+              Port: 7051
+
+    - &ORGT9
+        Name: ORG9MSP
+        ID: ORG9MSP
+        MSPDir: crypto-config/peerOrganizations/ORGT9.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGT9.DOMAIN
+              Port: 7051
+
+    - &ORGU1
+        Name: ORGU1MSP
+        ID: ORGU1MSP
+        MSPDir: crypto-config/peerOrganizations/ORGU1.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGU1.DOMAIN
+              Port: 7051
+
+    - &ORGU2
+        Name: ORGU2MSP
+        ID: ORGU2MSP
+        MSPDir: crypto-config/peerOrganizations/ORGU2.DOMAIN/msp
+        AnchorPeers:
+            - Host: peer0.ORGU2.DOMAIN
+              Port: 7051
+
 
 ################################################################################
 #
