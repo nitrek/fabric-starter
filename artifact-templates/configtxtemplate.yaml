@@ -256,8 +256,8 @@ Organizations:
               Port: 7051
 
     - &ORGT9
-        Name: ORG9MSP
-        ID: ORG9MSP
+        Name: ORGT9MSP
+        ID: ORGT9MSP
         MSPDir: crypto-config/peerOrganizations/ORGT9.DOMAIN/msp
         AnchorPeers:
             - Host: peer0.ORGT9.DOMAIN
@@ -298,7 +298,7 @@ Orderer: &OrdererDefaults
         - orderer.DOMAIN:7050
 
     # Batch Timeout: The amount of time to wait before creating a batch
-    BatchTimeout: 2s
+    BatchTimeout: 1ms
 
     # Batch Size: Controls the number of messages batched into a block
     BatchSize:
