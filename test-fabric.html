@@ -1,0 +1,110 @@
+<html>
+<script>
+  var start = 1
+var number = 100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
+var i =start;
+function callApiAdd(i,port,end){
+    var data = JSON.stringify({"peers":["h/peer0","h/peer1"],"fcn":"subscribe","args":["sec"+i]});
+      
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          //console.log(this.responseText);
+          if(i ==(end+start-1))
+          {
+            var d = new Date();
+            console.log(d)
+          }
+        }
+      });
+      
+      xhr.open("POST", "http://ec2-13-251-40-22.ap-southeast-1.compute.amazonaws.com:40"+port+"/channels/common/chaincodes/reference");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzA0MjUxOTYsInVzZXJuYW1lIjoiZGZnZGYiLCJvcmdOYW1lIjoidCIsImlhdCI6MTUzMDM4OTE5Nn0.KIT2iEt7SQ2t6oc1iJqeZFWdKup2HIcMPuxHmB_Z97Y");
+      
+      xhr.send(data);
+
+}
+function callApiIssue(i,port,end){
+    var data = JSON.stringify({"peers":["a/peer0","h/peer1"],"fcn":"issueCa","args":["sec"+i,"data"+i]});
+      
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          //console.log(this.responseText);
+          if(i ==(end+start-1))
+          {
+            var d = new Date();
+            console.log(d)
+          }
+        }
+      });
+      
+      xhr.open("POST", "http://ec2-13-251-40-22.ap-southeast-1.compute.amazonaws.com:400"+port+"/channels/common/chaincodes/reference");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MzA0MjUxOTYsInVzZXJuYW1lIjoiZGZnZGYiLCJvcmdOYW1lIjoidCIsImlhdCI6MTUzMDM4OTE5Nn0.KIT2iEt7SQ2t6oc1iJqeZFWdKup2HIcMPuxHmB_Z97Y");
+      
+      xhr.send(data);
+
+}
+
+var d = new Date();
+    console.log(d)
+while(i<(start+number)){
+callApiAdd(i,'00',number);
+callApiAdd(i,'01',number);
+callApiAdd(i,'02',number);
+callApiAdd(i,'03',number);
+callApiAdd(i,'04',number);
+callApiAdd(i,'05',number);
+callApiAdd(i,'06',number);
+callApiAdd(i,'07',number);
+callApiAdd(i,'08',number);
+callApiAdd(i,'09',number);
+callApiAdd(i,'10',number);
+callApiAdd(i,'11',number);
+callApiAdd(i,'12',number);
+callApiAdd(i,'13',number);
+callApiAdd(i,'14',number);
+callApiAdd(i,'15',number);
+callApiAdd(i,'16',number);
+callApiAdd(i,'17',number);
+callApiAdd(i,'18',number);
+callApiAdd(i,'19',number);
+ //callApiIssue(i,1,number);
+  //callApiIssue(i,3,number);
+  //callApiIssue(i,4,number);
+  //callApiIssue(i,5,number);
+  // callApiAdd0(i,1,number);
+  // callApiAdd0(i,2,number);
+  // callApiAdd0(i,3,number);
+  // callApiAdd0(i,4,number);
+  // callApiAdd0(i,5,number);
+  // callApiAdd0(i,6,number);
+  // callApiAdd0(i,7,number);
+  // callApiAdd0(i,8,number);
+  // callApiAdd0(i,9,number);
+  // callApiAdd(i,10,number);
+  // callApiAdd(i,11,number);
+  // callApiAdd(i,12,number);
+  // callApiAdd(i,13,number);
+  // callApiAdd(i,14,number);
+  // callApiAdd(i,15,number);
+  // callApiAdd(i,16,number);
+  // callApiAdd(i,17,number);
+  // callApiAdd(i,18,number);
+  // callApiAdd(i,19,number);
+  // callApiAdd(i,20,number);
+//console.log(i)
+i++;
+}
+var d1 = new Date();
+    console.log("call done"+d1)
+console.log("done")
+</script>
+
+</html>
